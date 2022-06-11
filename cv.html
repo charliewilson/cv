@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Charlie Wilson - CV</title>
+    <style type="text/css">
+      :root {
+        --padding: 25px;
+        --primary-colour: #0B5E55;
+        --secondary-colour: #f5f2f0;
+      }
+
+      div {
+        box-sizing: border-box;
+      }
+
+      div.container {
+        width:100%;
+        max-width:800px;
+        margin:auto;
+        display:flex;
+        flex-direction:row;
+        border:8px solid #222;
+        font-size:14px;
+      }
+
+      div.container span {
+        display:block;
+      }
+
+      div.sidebar header,
+      div.sidebar section,
+      div.main section {
+        padding:0 var(--padding) var(--padding) var(--padding);
+      }
+
+      div.sidebar header:first-of-type,
+      div.sidebar section:first-of-type,
+      div.main section:first-of-type {
+        padding:var(--padding);
+      }
+
+      div.sidebar {
+        flex:1;
+        background-color: var(--secondary-colour);
+      }
+
+      div.main {
+        flex:2;
+      }
+      
+      div.container h1 {
+        margin-top:0;
+        font-size:18px;
+      }
+
+      /* SIDEBAR */
+
+      div.sidebar header {
+        background: var(--primary-colour);
+        color: #fff;
+      }
+
+      div.sidebar section.bio p {
+        margin:0;
+      }
+
+      div.sidebar h1.name {
+        font-weight:bold;
+        font-size:28px;
+      }
+
+      div.sidebar span.title {
+        font-style:italic;
+        font-size:16px;
+        margin-bottom:40px;
+      }
+
+      div.sidebar ul.contact {
+        list-style:none;
+        padding-left:0;
+        margin-bottom:0;
+      }
+
+      div.sidebar ul.contact li {
+        margin-bottom:5px;
+      }
+
+      div.sidebar ul.contact li a {
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        color:inherit;
+        text-decoration:none;
+        white-space:nowrap;
+      }
+
+      div.sidebar ul.contact li a:hover {
+        text-decoration:underline;
+      }
+
+      div.sidebar ul.contact li a svg {
+        margin-right:5px;
+      }
+
+
+      /* MAIN */
+
+      div.main {
+        color: #111;
+      }
+
+      div.main section div.work span.title {
+        font-size:22px;
+      }
+
+      div.main section div.work span.employer {
+        font-size:16px;
+        margin:5px 0;
+      }
+
+      div.main section div.work span.duration {
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        color:inherit;
+        text-decoration:none;
+        white-space:nowrap;
+      }
+
+      div.main section div.work span.duration svg {
+        margin-right:5px;
+        color: #BBB;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <header>
+          <h1 class="name">CHARLIE WILSON</h1>
+          <span class="title">Software Engineer,<br>Photographer and<br>Videographer</span>
+          <ul class="contact">
+            <li>
+              <a href="https://github.com/charliewilson">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                </svg>
+                <span>github.com/charliewilson</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://charlie.town">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <line x1="3.6" y1="9" x2="20.4" y2="9"></line>
+                  <line x1="3.6" y1="15" x2="20.4" y2="15"></line>
+                  <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                  <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                </svg>
+                <span>charlie.town</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:me@charliewilson.co.uk">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <polyline points="3 7 12 13 21 7"></polyline>
+                </svg>
+                <span>me@charliewilson.co.uk</span>
+              </a>
+            </li>
+          </ul>
+          </header>
+          <section class="bio">
+          <p>Software engineer with over 10 years of commercial full-stack experience specialising in PHP, HTML/CSS and MySQL/SQLite, and LAMP Stack Setup & Administration, with working proficiency in or familiarity with Composer, JavaScript/ES6, Bootstrap, and jQuery. Received training in ReactJS. Proficient in WordPress stuff. Professional photographer, videographer, and photo and video editor with nearly 11 years’ combined experience in the blank, blank, and blank sectors.</p>
+          </section>
+        <section>
+          <h1>EDUCATION</h1>
+          <span>GCSE</span>
+          <span>A-Level</span>
+          <span>Woodbridge High School</span>
+          <span>2004 &mdash; 2011</span>
+        </section>
+        <section>
+          <h1>SKILLS</h1>
+          <ul>
+            <li>PHP (8.0+, Composer, Kirby, Wordpress)</li>
+            <li>SQL (MySQL, SQLite, phpMyAdmin)</li>
+            <li>HTML/CSS (Sass, Bootstrap)</li>
+            <li>JavaScript (ES6, jQuery)</li>
+            <li>Twig (Symfony)</li>
+            <li>Composer</li>
+            <li>DigitalOcean</li>
+            <li>Apache</li>
+            <li>Linux/Git</li>
+          </ul>
+        </section>
+      </div>
+      <div class="main">
+        <section>
+          <h1>WORK EXPERIENCE</h1>
+          <div class="work">
+            <span class="title">Lead Software Engineer, Head Photographer and Videographer</span>
+            <span class="employer">Essex Services Group</span>
+            <span class="duration">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
+                <circle cx="18" cy="18" r="4"></circle>
+                <path d="M15 3v4"></path>
+                <path d="M7 3v4"></path>
+                <path d="M3 11h16"></path>
+                <path d="M18 16.496v1.504l1 1"></path>
+             </svg>
+             <span>June 2016 &mdash; Present (6 years)</span>
+            </span>
+            <ul class="responsibilities">
+              <li>Planned, designed and developed numerous PHP applications for use at board level.</li>
+              MySiteDocs
+              PHP MVC / MySQL / Tabler
+              MyProjects
+              PHP MVC / MySQL / AdminLTE
+              PDF File Upload
+              ModularQA
+              PHP MVC / MySQL / AdminLTE
+              Dymo LabelWriter Integration
+              MyDashboard
+              Kirby CMS
+              Checkin (covid QR checkin system for sites)
+              PHP MVC / MySQL / Bootstrap
+              Built MVC framework
+              Altorouter, delight-im/auth, twig
+              DigitalOcean VPS LAMP
+              SysAdmin - Cron MySQL syncthing offsite backups
+              Maintenance/updates/bugfixes
+              REST APIs & Local SDKs (Sendgrid, Dymo Label Printer)
+              CMS template dev and setup (Kirby, Wordpress)
+            </ul>
+          </div>
+          <div class="work">
+            <span class="title">Full-Stack Developer, Web Content Designer</span>
+            <span class="employer">Freelance</span>
+            <span class="duration">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
+                <circle cx="18" cy="18" r="4"></circle>
+                <path d="M15 3v4"></path>
+                <path d="M7 3v4"></path>
+                <path d="M3 11h16"></path>
+                <path d="M18 16.496v1.504l1 1"></path>
+             </svg>
+             <span>January 2012 &mdash; Present (10 years, 5 months)</span>
+            </span>
+            <ul class="responsibilities">
+              <li>Did some stuff.</li>
+            </ul>
+          </div>
+
+
+          <div class="work">
+            <span class="title">Social Media and Engineering & Design Support Executive</span>
+            <span class="employer">Delia Online</span>
+            <span class="duration">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
+                <circle cx="18" cy="18" r="4"></circle>
+                <path d="M15 3v4"></path>
+                <path d="M7 3v4"></path>
+                <path d="M3 11h16"></path>
+                <path d="M18 16.496v1.504l1 1"></path>
+             </svg>
+             <span>December 2011 &mdash; June 2016 (4 years, 7 months)</span>
+            </span>
+            <ul class="responsibilities">
+              <li>Managed social media pages, providing X updates per Y to a combined average audience of Z.</li>
+              <li>Assisted engineering and design teams with HTML, CSS, and jQuery, namely handling JavaScript bug-fixing and implementing custom PhotoShop designs in HTML and CSS. </li>
+              <li>Spearheaded creation and editing of high-definition photo and video content site-wide, reaching an average daily audience of two million (during time of employment). </li>
+              <li>Created unique graphics for social media advertisements. </li>
+              <li>Something about WordPress</li>
+              <li>Established presence on Vimeo for Delia Online’s dynamic video content needs.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h1>PROJECTS</h1>
+            kieferpassey.co.uk
+            charlie.town
+            words.charlie.town
+            photos.charlie.town
+            trackle.charlie.town
+            stalks.app
+            mickywilson.com
+        </section>
+
+        <section>
+          <h1>PROFESSIONAL DEVELOPMENT</h1>
+            ReactJS Academy London — May 2019
+            Seven-day, 60-hour (comprehensive) coding bootcamp focused on X, Y, and Z.
+            Developed skldfngldf
+            Refined skills in dfngldfkgn
+            Mention of a project or projects??
+        
+        </section>
+
+      </div>
+    </div>
+  </body>
+</html>

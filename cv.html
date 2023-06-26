@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,7 +9,12 @@
       :root {
         --padding: 25px;
         --primary-colour: #0B5E55;
+        /* --primary-colour: #f50; */
         --secondary-colour: #f5f2f0;
+      }
+
+      body {
+      	font-family:"Lato", sans-serif;
       }
 
       div {
@@ -17,6 +22,7 @@
       }
 
       div.container {
+        box-sizing: border-box;
         width:100%;
         max-width:800px;
         margin:auto;
@@ -24,6 +30,16 @@
         flex-direction:row;
         border:8px solid #222;
         font-size:14px;
+      }
+
+      @media print {
+        html, body {
+      		height:calc(100% - 8px);
+      	}
+      	div.container {
+      	    height:100%;
+      	    max-width:100%;
+      	}
       }
 
       div.container span {
@@ -65,11 +81,15 @@
 
       div.sidebar section.bio p {
         margin:0;
+        font-size:16px;
       }
 
       div.sidebar h1.name {
+        font-family:"Arial Black", sans-serif;
         font-weight:bold;
-        font-size:28px;
+        font-style:italic;
+        font-size:34px;
+        line-height:1;
       }
 
       div.sidebar span.title {
@@ -105,6 +125,15 @@
         margin-right:5px;
       }
 
+      div.sidebar ul.technologies {
+      	padding-left:12px;
+      }
+
+      div.sidebar ul.technologies li span {
+        font-size:12px;
+        font-style:italic;
+        color:#333;
+      }
 
       /* MAIN */
 
@@ -134,6 +163,47 @@
         margin-right:5px;
         color: #BBB;
       }
+
+      ul li {
+        margin-bottom:5px;
+      }
+      
+      ul li:last-child {
+        margin-bottom:0;
+      }
+
+      /* PROJECTS */
+
+      div.project-container {
+      	display:flex;
+      	flex-direction:row;
+      	gap:20px;
+      }
+
+      div.project-container div.project {
+      	flex:1;
+      }
+
+      div.project-container div.project span.title {
+      	font-size:20px;
+      }
+
+      div.project-container div.project span.link a {
+      	display:flex;
+      	flex-direction:row;
+      	align-items:center;      
+      	text-decoration:none;
+      	color:var(--primary-colour);
+      	margin-top:5px;
+      }
+
+      div.project-container div.project span.link a:hover {
+      	text-decoration:underline;
+      }
+
+      div.project-container div.project span.link a svg {
+      	margin-right: 5px;
+      }
     </style>
   </head>
   <body>
@@ -141,11 +211,10 @@
       <div class="sidebar">
         <header>
           <h1 class="name">CHARLIE WILSON</h1>
-          <span class="title">Software Engineer,<br>Photographer and<br>Videographer</span>
           <ul class="contact">
             <li>
-              <a href="https://github.com/charliewilson">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <a target="_blank" href="https://github.com/charliewilson">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
                 </svg>
@@ -153,8 +222,8 @@
               </a>
             </li>
             <li>
-              <a href="https://charlie.town">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <a target="_blank" href="https://charlie.town/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <circle cx="12" cy="12" r="9"></circle>
                   <line x1="3.6" y1="9" x2="20.4" y2="9"></line>
@@ -166,8 +235,8 @@
               </a>
             </li>
             <li>
-              <a href="mailto:me@charliewilson.co.uk">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <a target="_blank" href="mailto:me@charliewilson.co.uk">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                   <polyline points="3 7 12 13 21 7"></polyline>
@@ -175,30 +244,58 @@
                 <span>me@charliewilson.co.uk</span>
               </a>
             </li>
+            <li>
+              <a target="_blank" href="tel:+447979186209">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                 <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+              </svg>
+                <span>+447979 186209</span>
+              </a>
+            </li>
           </ul>
           </header>
           <section class="bio">
-          <p>Software engineer with over 10 years of commercial full-stack experience specialising in PHP, HTML/CSS and MySQL/SQLite, and LAMP Stack Setup & Administration, with working proficiency in or familiarity with Composer, JavaScript/ES6, Bootstrap, and jQuery. Received training in ReactJS. Proficient in WordPress stuff. Professional photographer, videographer, and photo and video editor with nearly 11 years’ combined experience in the blank, blank, and blank sectors.</p>
+          <p>Software engineer with over 10 years of combined commercial 
+frontend &amp; backend experience specialising in PHP, HTML/CSS, MySQL/SQLite, 
+and LAMP Stack Setup &amp; Administration.<br>Working proficiency with
+JavaScript/ES6 and Svelte.</p><br>
+<p>Photographer, videographer, and photo and video editor with
+ nearly 11 years’ combined corporate experience.</p>
           </section>
         <section>
-          <h1>EDUCATION</h1>
-          <span>GCSE</span>
-          <span>A-Level</span>
-          <span>Woodbridge High School</span>
-          <span>2004 &mdash; 2011</span>
-        </section>
-        <section>
           <h1>SKILLS</h1>
-          <ul>
-            <li>PHP (8.0+, Composer, Kirby, Wordpress)</li>
-            <li>SQL (MySQL, SQLite, phpMyAdmin)</li>
-            <li>HTML/CSS (Sass, Bootstrap)</li>
-            <li>JavaScript (ES6, jQuery)</li>
-            <li>Twig (Symfony)</li>
+          <ul class="technologies">
+            <li>
+              PHP
+              <span>7/8+, KirbyCMS, Wordpress</span>
+            </li>
+            <li>
+              SQL
+              <span>MySQL, SQLite, phpMyAdmin</span>
+            </li>
+            <li>
+              HTML/CSS
+              <span>Sass, Bootstrap</span>
+            </li>
+            <li>
+              JavaScript
+              <span>ES6, jQuery</span>
+            </li>
+            <li>Twig</li>
+            <li>Svelte</li>
             <li>Composer</li>
             <li>DigitalOcean</li>
             <li>Apache</li>
-            <li>Linux/Git</li>
+            <li>Git</li>
+            <li>
+              Linux
+              <span>Ubuntu/Debian</span>
+            </li>
+            <li>
+         	  Adobe Creative Suite
+         	  <span>Photoshop, Premiere, After Effects</span>
+        	</li>
           </ul>
         </section>
       </div>
@@ -206,10 +303,10 @@
         <section>
           <h1>WORK EXPERIENCE</h1>
           <div class="work">
-            <span class="title">Lead Software Engineer, Head Photographer and Videographer</span>
-            <span class="employer">Essex Services Group</span>
+            <span class="title">Software Developer</span>
+            <span class="employer">Essex Services Group LTD</span>
             <span class="duration">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#111" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
                 <circle cx="18" cy="18" r="4"></circle>
@@ -218,36 +315,66 @@
                 <path d="M3 11h16"></path>
                 <path d="M18 16.496v1.504l1 1"></path>
              </svg>
-             <span>June 2016 &mdash; Present (6 years)</span>
+             <span>June 2016 — Present</span>
             </span>
             <ul class="responsibilities">
-              <li>Planned, designed and developed numerous PHP applications for use at board level.</li>
-              MySiteDocs
-              PHP MVC / MySQL / Tabler
-              MyProjects
-              PHP MVC / MySQL / AdminLTE
-              PDF File Upload
-              ModularQA
-              PHP MVC / MySQL / AdminLTE
-              Dymo LabelWriter Integration
-              MyDashboard
-              Kirby CMS
-              Checkin (covid QR checkin system for sites)
-              PHP MVC / MySQL / Bootstrap
-              Built MVC framework
-              Altorouter, delight-im/auth, twig
-              DigitalOcean VPS LAMP
-              SysAdmin - Cron MySQL syncthing offsite backups
-              Maintenance/updates/bugfixes
-              REST APIs & Local SDKs (Sendgrid, Dymo Label Printer)
-              CMS template dev and setup (Kirby, Wordpress)
-            </ul>
+
+              <li>
+                Built several greenfield projects used at board-level and across the wider company,
+                improving project management, document management, and quality assurance procedures.
+              </li>
+
+              <li>
+                Responsible for choosing best technologies to complete projects; selected and integrated
+                relevant libraries/packages with Composer.
+              </li>
+
+              <li>
+                Technical lead responsible for the entire software development lifecycle.
+              </li>
+
+              <li>
+                Experience integrating both PHP and JS API/SDKs into new and existing projects, interfacing with both SaaS platforms and physical hardware.
+              </li>
+
+              <!--<li>
+                Developed and implemented in-house PHP framework across 
+entire application suite — including integrations with MySQL &amp; 
+SQLite (PDO), various HTML/CSS dashboard templates (Tabler.io &amp; 
+adminLTE), and DYMO Javascript SDK for label printing.
+              </li> -->
+
+              <!-- <li>
+                Supported projects after launch with both regular feature/bugfix updates and in a SysAdmin capacity.
+              </li> -->
+
+              <li>
+                Responsible for managing several VPS Ubuntu web servers (DigitalOcean) &mdash; including automating offsite MySQL backups with Syncthing (and testing restores),
+                performing security updates, and migrating to new Ubuntu releases where relevant.
+              </li>
+
+              <li>
+                Developed full websites with and templates for various content management systems (Wordpress &amp; Kirby).
+              </li>
+
+              <li>
+                Additionally served as lead photographer and videographer; captured photos/video content,
+                edited with Adobe Premiere, and creating motion graphics with After Effects.
+              </li>
+            
+              </ul>
+<!-- 
+              <p><em>Technologies used:</em> PHP 7 &amp; 8+, Composer, Twig (Symfony), DigitalOcean, Linux 
+(Ubuntu 22.04 and earlier), Wordpress, Kirby CMS, Git</p> -->
+
+<!--
+            
           </div>
           <div class="work">
             <span class="title">Full-Stack Developer, Web Content Designer</span>
             <span class="employer">Freelance</span>
             <span class="duration">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#111" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
                 <circle cx="18" cy="18" r="4"></circle>
@@ -256,19 +383,21 @@
                 <path d="M3 11h16"></path>
                 <path d="M18 16.496v1.504l1 1"></path>
              </svg>
-             <span>January 2012 &mdash; Present (10 years, 5 months)</span>
+             <span>January 2012 — Present</span>
             </span>
             <ul class="responsibilities">
               <li>Did some stuff.</li>
             </ul>
           </div>
 
+          -->
+
 
           <div class="work">
-            <span class="title">Social Media and Engineering & Design Support Executive</span>
+            <span class="title">Social Media &amp; Sales Support Executive</span>
             <span class="employer">Delia Online</span>
             <span class="duration">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#111" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
                 <circle cx="18" cy="18" r="4"></circle>
@@ -277,30 +406,58 @@
                 <path d="M3 11h16"></path>
                 <path d="M18 16.496v1.504l1 1"></path>
              </svg>
-             <span>December 2011 &mdash; June 2016 (4 years, 7 months)</span>
+             <span>December 2011 — June 2016 (4 years, 7 months)</span>
             </span>
             <ul class="responsibilities">
-              <li>Managed social media pages, providing X updates per Y to a combined average audience of Z.</li>
-              <li>Assisted engineering and design teams with HTML, CSS, and jQuery, namely handling JavaScript bug-fixing and implementing custom PhotoShop designs in HTML and CSS. </li>
-              <li>Spearheaded creation and editing of high-definition photo and video content site-wide, reaching an average daily audience of two million (during time of employment). </li>
-              <li>Created unique graphics for social media advertisements. </li>
-              <li>Something about WordPress</li>
-              <li>Established presence on Vimeo for Delia Online’s dynamic video content needs.</li>
+              <li>
+                Assisted engineering and design teams, build a jQuery frontend for
+                serving video content, and implemented Photoshop designs in HTML and CSS.
+              </li>
+              <li>
+                Helped technical migration from a legacy CMS to a new Drupal-based solution.
+              </li>
+              <li>
+                Managed the social media accounts, posting regular updates to Facebook and Twitter,
+                and producing detailed reports for monthly team meetings.
+              <li>
+                Created unique graphics for social media advertisements using Photoshop/Illustrator.
+              </li>
             </ul>
           </div>
         </section>
 
         <section>
-          <h1>PROJECTS</h1>
-            kieferpassey.co.uk
-            charlie.town
-            words.charlie.town
-            photos.charlie.town
-            trackle.charlie.town
-            stalks.app
-            mickywilson.com
+          <h1>FEATURED PROJECTS</h1>
+          <div class="project-container">
+              <div class="project">
+                <span class="title">folder</span>
+                <span class="link">
+                  <a href="https://github.com/charliewilson/folder">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                  </svg>
+                  charliewilson/folder</a>
+                </span>
+                <p>A self-hosted photo journal platform I built whilst taking some time away from Instagram.</p>
+                <p>PHP full stack, using delight-im/auth for user login, and Twig for templating.</p>
+              </div>
+              <div class="project">
+                <span class="title">syah</span>
+                <span class="link">
+                  <a href="https://github.com/charliewilson/syah">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                  </svg>
+                  charliewilson/syah</a>
+                </span>
+                <p>90s-inspired website for East London band See You at Home.</p>
+                <p>Built with Svelte 3 and 98.css</p>
+              </div>
+          </div>
         </section>
-
+<!--
         <section>
           <h1>PROFESSIONAL DEVELOPMENT</h1>
             ReactJS Academy London — May 2019
@@ -310,8 +467,9 @@
             Mention of a project or projects??
         
         </section>
-
+-->
       </div>
     </div>
-  </body>
-</html>
+  
+
+</body></html>
